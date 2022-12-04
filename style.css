@@ -1,0 +1,370 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.clear-fixed::after{
+   content: "";
+   display: block;
+   clear: both;
+}
+
+.contain{
+    width: 1200px;
+    margin: auto;
+}
+.menu{
+    width: 70%;
+    float: right;
+    text-align: right;
+}
+.menu ul{
+    background: #0bbf9a;
+   
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 23px 24px;
+    font-size: 16px;
+    position: relative;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial black;
+}
+
+
+.menu ul li:hover{
+    background:#ddd;
+}
+
+/* drop */
+.menu ul li ul{
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 220px;
+    text-align: center;
+    visibility: hidden;
+    transition: .8s;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+.menu ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    transform:scale(1) rotate(360deg);
+    background: rgb(154, 177, 24);
+}
+
+.menu ul li ul li a{
+    color:white;
+    font-family: arial black;
+}
+
+.menu ul li ul li{
+    display: block;
+    margin-left: -32px;
+}
+.menu ul li ul li a{
+    display: block;
+}
+
+.menu ul li ul li ul{
+    position: absolute;
+    top: 0px;
+    left: 100%;
+}
+
+/* header-logo */
+
+.header-logo{
+    background: #0bbf9a;
+    color: white;
+    width: 30%;
+}
+
+.header-logo h1{
+    padding: 11px 45px;
+    font-family: serif;
+}
+
+/* banner-part */
+
+.banner{
+    width: 100%;
+    height: 562px;
+    background-image: url(https://i.ibb.co/7p9BdW9/header-bg01.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-top: -8px;
+    position: relative;
+    z-index: -1;
+}
+
+.banner-content{
+    position: absolute;
+    left: 422px;
+    top: 270px;
+    color: white;
+    text-align: center;
+    
+}
+
+.banner-content h1{
+    font-weight: 901;
+    font-style: italic;
+    font-family: serif;
+}
+
+.btn1{
+    width: 152px;
+    height: 50px;
+    background: #0bbf9a;
+    border: 2px solid white;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 445px;
+    left: 605px;
+}
+.btn1:hover a{
+    color: black;
+    font-family: arial black;
+}
+
+.btn1::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: yellow;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    transition: .8s;
+    z-index: -1;
+    
+}
+.btn1::after{
+    content: "";
+    width: 50%;
+    height: 0%;
+    background: yellow;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    visibility: hidden;
+    transition: .8s;
+    z-index: -1;
+    
+}
+.btn1:hover::before{
+    visibility: visible;
+   width: 50%;
+  
+
+   
+}
+.btn1:hover::after{
+    visibility: visible;
+   height: 100%;
+  
+
+   
+}
+
+.btn1 a{
+    text-decoration: none;
+    line-height: 50px;
+    color: white;
+}
+
+/* service-part */
+
+.service-part{
+    width: 100%;
+    margin-bottom: 120px;
+    margin-bottom: 2px solid #0bbf9a;
+}
+
+.our-service{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.our-service h2{
+    font-family: serif;
+}
+
+.web,.graphic,.app,.digital{
+    width: 200px;
+    text-align: center;
+    margin-top: 100px;
+    float: left;
+    margin-left: 80px;
+    
+}
+.web h3,.graphic h3,.app h3,.digital h3{
+    font-size: 20px;
+   font-weight: 501;
+}
+
+.web i,.graphic i,.app i,.digital i{
+    font-size: 60px;
+    color: #0dbf9b;
+    margin-bottom: 25px;
+}
+
+.app{
+    width: 207px;
+}
+
+/* about-us */
+
+.about-us{
+    width: 100%;
+    border-top: 2px solid #0bbf9a;
+}
+
+.about{
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 501;
+}
+
+.about h2{
+    font-weight: 501;
+    font-family: serif;
+}
+
+.about-pic{
+    width:52%;
+    margin-top: 75px ;
+    margin-left: 40px;
+    float: left;
+    height: 415px;
+    background-image: url(https://i.ibb.co/JHBXY7c/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.we-are,.we-do{
+    width: 38%;
+    float: left;
+    margin-top: 80px;
+    margin-left: 70px;
+
+}
+
+.we-do{
+    margin-top: 0px;
+}
+.we-are h3,.we-do h3{
+    font-size: 20px;
+}
+
+/* contact-part */
+
+.contact{
+    width: 100%;
+    background: #f6f6f6;
+    margin-top: 100px;
+   
+}
+
+.contact-us{
+    text-align: center;
+   
+}
+
+.contact-us h2{
+    margin-top: 70px;
+    display: inline-block;
+    font-family: serif;
+    font-weight: 501;
+}
+
+.sector,.info,.number{
+    text-align: center;
+    width: 171px;
+    margin-left: 250px;
+    margin-top: 70px;
+    float: left;
+    margin-bottom: 100px;
+    transition: .8s;
+}
+.sector:hover{
+   transform: scale(1.3);
+}
+.info:hover{
+   transform: scale(1.3);
+}
+.number:hover{
+   transform: scale(1.4);
+}
+
+.sector i,.info i,.number i{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color:#0bbf9a ;
+}
+
+.info{
+    margin-left: 144px;
+}
+
+.number{
+    margin-left: 144px;
+}
+
+/* social-menu */
+
+.social-menu{
+    background:#0bbf9a ;
+    text-align: center;
+}
+
+.social-menu ul li{
+    display: inline-block;
+    padding: 20px 10px;
+    transition: .8s;
+}
+
+.social-menu ul li:hover{
+    transform: scale(2.4);
+    color: yellowgreen;
+}
+.social-menu ul li:hover i{
+   
+    color: yellow;
+}
+.social-menu i{
+    font-size: 20px;
+    color: white;
+}
+
+.social-menu ul li a{
+    color: white;
+    
+   
+}
+
+/* copyright */
+
+.copyright{
+    width: 100%;
+    background: #222222;
+    color: #f6f6f6;
+    text-align: center;
+    padding: 15px ;
+    margin-top: -16px;
+}
+
